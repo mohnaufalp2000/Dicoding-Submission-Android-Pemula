@@ -1,59 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="30dp"
     tools:context=".DetailActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/detail_img"
             />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:background="@color/colorPrimary"
-            />
+        </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/detail_name"
-                android:text="Nama Sepatu"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                />
-            <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="24sp"
+                android:layout_marginBottom="10dp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="16sp"/>
+            <TextView
                 android:id="@+id/detail_detail"
-                android:text="isi detail"
-                android:textSize="12sp"
-                />
-            <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/detail_price"
-                android:text="price"
-                android:textSize="16sp"
-                />
+                android:text="isi detail"
+                android:textSize="12sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Size"
+                android:textSize="10sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/button_one"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:text="UK 8"
+                        android:textSize="7sp"
+                        />
+                    <Button
+                        android:id="@+id/button_two"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:text="UK 8.5"
+                        android:textSize="7sp"/>
+                    <Button
+                        android:id="@+id/button_three"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:text="UK 9"
+                        android:textSize="7sp"/>
+                    <Button
+                        android:id="@+id/button_four"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:text="UK 9.5"
+                        android:textSize="7sp"/>
+                    <Button
+                        android:id="@+id/button_five"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:text="UK 10"
+                        android:textSize="7sp"/>
+                    <Button
+                        android:id="@+id/button_six"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:text="UK 10.5"
+                        android:textSize="7sp"/>
+                </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/keranjang"
+                        android:layout_width="170dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:text="Keranjang"
+                        android:textAllCaps="false"
+                        android:drawableRight="@drawable/ic_baseline_shopping_cart_24"
+                        android:background="@drawable/rounded"
+                        />
+                    <Button
+                        android:id="@+id/beli"
+                        android:layout_width="170dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="21dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:text="Beli Sekarang"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/rounded2"/>
+                    <TextView
+                        android:id="@+id/detail_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/keranjang"
+                        android:text="price"
+                        android:textSize="24sp"
+                        android:textColor="#000000"/>
+            </RelativeLayout>
 
 
-
-</ScrollView>
+</LinearLayout>

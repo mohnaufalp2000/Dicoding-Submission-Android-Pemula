@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_detail.*
 
 private lateinit var rvActivityMain : RecyclerView
 private var listMainActivity: ArrayList<Shoes> = arrayListOf()
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
             addAll(ShoesData.listData)
         }
         showRecyclerList()
+
     }
 
     private fun showRecyclerList() {

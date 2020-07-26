@@ -1,12 +1,18 @@
 package com.example.ownyourshoes
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import kotlinx.android.synthetic.main.activity_detail.*
+
 
 class DetailActivity : AppCompatActivity() {
+
+
     companion object{
         const val EXTRA_IMG = "extra_img"
         const val EXTRA_NAME = "extra_name"
@@ -17,6 +23,7 @@ class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
+
 
         val detailActivityimg: ImageView = findViewById(R.id.detail_img)
         val detailActivityname: TextView = findViewById(R.id.detail_name)
@@ -35,4 +42,5 @@ class DetailActivity : AppCompatActivity() {
         detailActivitydetail.text = detail //Untuk menampilkan detail
         detailActivityprice.text = price //Untuk menampilkan price
     }
+
 }
