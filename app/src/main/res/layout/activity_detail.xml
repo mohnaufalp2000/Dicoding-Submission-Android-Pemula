@@ -31,7 +31,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name"
+                android:textStyle="bold"
                 android:textSize="24sp"
+
                 android:layout_marginBottom="10dp"
                 />
             <View
@@ -66,38 +68,38 @@
                     android:orientation="horizontal">
                     <Button
                         android:id="@+id/button_one"
-                        android:layout_width="50dp"
+                        android:layout_width="55dp"
                         android:layout_height="35dp"
                         android:text="UK 8"
                         android:textSize="7sp"
                         />
                     <Button
                         android:id="@+id/button_two"
-                        android:layout_width="50dp"
+                        android:layout_width="55dp"
                         android:layout_height="35dp"
                         android:text="UK 8.5"
                         android:textSize="7sp"/>
                     <Button
                         android:id="@+id/button_three"
-                        android:layout_width="50dp"
+                        android:layout_width="55dp"
                         android:layout_height="35dp"
                         android:text="UK 9"
                         android:textSize="7sp"/>
                     <Button
                         android:id="@+id/button_four"
-                        android:layout_width="50dp"
+                        android:layout_width="55dp"
                         android:layout_height="35dp"
                         android:text="UK 9.5"
                         android:textSize="7sp"/>
                     <Button
                         android:id="@+id/button_five"
-                        android:layout_width="50dp"
+                        android:layout_width="55dp"
                         android:layout_height="35dp"
                         android:text="UK 10"
                         android:textSize="7sp"/>
                     <Button
                         android:id="@+id/button_six"
-                        android:layout_width="50dp"
+                        android:layout_width="55dp"
                         android:layout_height="35dp"
                         android:text="UK 10.5"
                         android:textSize="7sp"/>
