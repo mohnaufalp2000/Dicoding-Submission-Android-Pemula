@@ -3,6 +3,8 @@ package com.example.ownyourshoes
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -45,7 +47,31 @@ class MainActivity : AppCompatActivity() {
                 putExtra(DetailActivity.EXTRA_PRICE, shoesSelected.price)
             }
         startActivity(kedetail)
-
     }
 
+    private fun showAbout(){
+        val aboutIntent = Intent(this@MainActivity, About::class.java)
+        startActivity(aboutIntent)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        setMode(item.itemId)
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun setMode(selectedMode: Int) {
+        when (selectedMode) {
+            R.id.action_list -> {
+                showRecyclerList()
+            }
+            R.id.action_about -> {
+                showAbout()
+            }
+        }
+    }
 }
