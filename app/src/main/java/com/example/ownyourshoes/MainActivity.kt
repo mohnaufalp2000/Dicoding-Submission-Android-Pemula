@@ -1,13 +1,12 @@
 package com.example.ownyourshoes
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_detail.*
 
 private lateinit var rvActivityMain : RecyclerView
 private var listMainActivity: ArrayList<Shoes> = arrayListOf()
